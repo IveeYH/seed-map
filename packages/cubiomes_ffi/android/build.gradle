@@ -45,7 +45,7 @@ android {
     }
 
     defaultConfig {
-        minSdk 19
+        minSdk 21
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11"

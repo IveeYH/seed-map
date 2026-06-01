@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a",
+  "command": "/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcubiomes_engine_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -std=gnu99 -o CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/finders.c.o -c /Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/finders.c",
+  "file": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/finders.c"
+},
+{
+  "directory": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a",
+  "command": "/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcubiomes_engine_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -std=gnu99 -o CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/generator.c.o -c /Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/generator.c",
+  "file": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/generator.c"
+},
+{
+  "directory": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a",
+  "command": "/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcubiomes_engine_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -std=gnu99 -o CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/layers.c.o -c /Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/layers.c",
+  "file": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/layers.c"
+},
+{
+  "directory": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a",
+  "command": "/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcubiomes_engine_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -std=gnu99 -o CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/biomenoise.c.o -c /Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/biomenoise.c",
+  "file": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/biomenoise.c"
+},
+{
+  "directory": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a",
+  "command": "/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcubiomes_engine_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -std=gnu99 -o CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/biomes.c.o -c /Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/biomes.c",
+  "file": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/biomes.c"
+},
+{
+  "directory": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a",
+  "command": "/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcubiomes_engine_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -std=gnu99 -o CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/noise.c.o -c /Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/noise.c",
+  "file": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/noise.c"
+},
+{
+  "directory": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a",
+  "command": "/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcubiomes_engine_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -std=gnu99 -o CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/util.c.o -c /Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/util.c",
+  "file": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/util.c"
+},
+{
+  "directory": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a",
+  "command": "/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcubiomes_engine_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -std=gnu99 -o CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/quadbase.c.o -c /Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/quadbase.c",
+  "file": "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/quadbase.c"
+}
+]

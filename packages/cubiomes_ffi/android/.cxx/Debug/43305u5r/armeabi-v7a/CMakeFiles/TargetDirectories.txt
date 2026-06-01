@@ -1,0 +1,3 @@
+/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a/CMakeFiles/cubiomes_engine.dir
+/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/Debug/43305u5r/armeabi-v7a/CMakeFiles/rebuild_cache.dir

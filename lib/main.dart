@@ -9,10 +9,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:minecraft_seedwalker_mobile/l10n/app_localizations.dart';
 
-final themeManager = ThemeManager();
-final languageManager = LanguageManager();
+late final ThemeManager themeManager;
+late final LanguageManager languageManager;
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  themeManager = ThemeManager();
+  languageManager = LanguageManager();
   LicenseRegistry.addLicense(() async* {
     final license = await rootBundle.loadString('packages/cubiomes_ffi/LICENSE');
     yield LicenseEntryWithLineBreaks(['cubiomes'], license);

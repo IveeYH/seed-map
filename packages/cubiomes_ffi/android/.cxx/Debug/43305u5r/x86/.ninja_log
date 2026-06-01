@@ -1,0 +1,10 @@
+# ninja log v5
+1	90	1780304731343793128	CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/biomes.c.o	e0bfd27b876261b9
+1	97	1780304731352136274	CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/noise.c.o	f6244f2880dae717
+0	106	1780304731361327461	CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/generator.c.o	146edc5d2dd8ddaf
+1	113	1780304731368437569	CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/util.c.o	f8f262a0f80052a8
+2	131	1780304731386821817	CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/quadbase.c.o	55cb491717b1b39d
+1	135	1780304731390155809	CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/layers.c.o	2eabc1ba438df239
+1	164	1780304731418753865	CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/biomenoise.c.o	3506f08e78bae7c3
+0	203	1780304731456560692	CMakeFiles/cubiomes_engine.dir/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/src/finders.c.o	4693512575d1a085
+203	256	1780304731510288647	/Users/iveeyh/Repositories/minecraft_waypoints/build/cubiomes_ffi/intermediates/cxx/Debug/43305u5r/obj/x86/libcubiomes_engine.so	af0e0b8dbbd8db80

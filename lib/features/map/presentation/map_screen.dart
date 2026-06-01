@@ -266,13 +266,25 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
   }
 
   void _showWaypointsMenu() {
+    final Set<int> selectedDimensions = {};
+
     showModalBottomSheet(
       context: context,
       backgroundColor: Theme.of(context).bottomSheetTheme.backgroundColor,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (context) => StatefulBuilder(
         builder: (context, setModalState) {
-          final waypoints = _currentWorld.waypoints.where((w) => w.dimension == _selectedDimension).toList();
+          final waypoints = _currentWorld.waypoints.where((w) {
+            if (selectedDimensions.isEmpty) return true;
+            return selectedDimensions.contains(w.dimension);
+          }).toList();
+          
+          Widget getDimensionIcon(int dim) {
+            if (dim == 0) return const Icon(Icons.public, color: Colors.green, size: 16);
+            if (dim == -1) return const Icon(Icons.whatshot, color: Colors.redAccent, size: 16);
+            if (dim == 1) return const Icon(Icons.nights_stay, color: Colors.deepPurple, size: 16);
+            return const SizedBox.shrink();
+          }
           
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
@@ -282,6 +294,51 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                 Text(
                   AppLocalizations.of(context)!.mapScreenWaypointList,
                   style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 12),
+                Wrap(
+                  spacing: 8,
+                  children: [
+                    FilterChip(
+                      label: Text(AppLocalizations.of(context)!.dimensionOverworld, style: const TextStyle(color: Colors.white)),
+                      selected: selectedDimensions.contains(0),
+                      onSelected: (val) {
+                        setModalState(() {
+                          if (val) selectedDimensions.add(0);
+                          else selectedDimensions.remove(0);
+                        });
+                      },
+                      selectedColor: Colors.green.withOpacity(0.3),
+                      checkmarkColor: Colors.green,
+                      backgroundColor: Theme.of(context).cardColor,
+                    ),
+                    FilterChip(
+                      label: Text(AppLocalizations.of(context)!.dimensionNether, style: const TextStyle(color: Colors.white)),
+                      selected: selectedDimensions.contains(-1),
+                      onSelected: (val) {
+                        setModalState(() {
+                          if (val) selectedDimensions.add(-1);
+                          else selectedDimensions.remove(-1);
+                        });
+                      },
+                      selectedColor: Colors.redAccent.withOpacity(0.3),
+                      checkmarkColor: Colors.redAccent,
+                      backgroundColor: Theme.of(context).cardColor,
+                    ),
+                    FilterChip(
+                      label: Text(AppLocalizations.of(context)!.dimensionEnd, style: const TextStyle(color: Colors.white)),
+                      selected: selectedDimensions.contains(1),
+                      onSelected: (val) {
+                        setModalState(() {
+                          if (val) selectedDimensions.add(1);
+                          else selectedDimensions.remove(1);
+                        });
+                      },
+                      selectedColor: Colors.deepPurple.withOpacity(0.3),
+                      checkmarkColor: Colors.deepPurple,
+                      backgroundColor: Theme.of(context).cardColor,
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 16),
                 if (waypoints.isEmpty)
@@ -302,23 +359,43 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                         final w = waypoints[index];
                         return ListTile(
                           leading: Icon(Icons.flag, color: Color(w.color), size: 32),
-                          title: Text(w.name, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                          title: Row(
+                            children: [
+                              Text(w.name, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                              const SizedBox(width: 8),
+                              getDimensionIcon(w.dimension),
+                            ],
+                          ),
                           subtitle: Text('X: ${w.x}  Z: ${w.z}', style: const TextStyle(color: Colors.white54, fontFamily: 'monospace')),
                           onTap: () {
                             Navigator.pop(context);
-                            _centerMapOn(Offset(w.x.toDouble(), w.z.toDouble()));
+                            double targetX = w.x.toDouble();
+                            double targetZ = w.z.toDouble();
+                            
+                            if (_selectedDimension == 0 && w.dimension == -1) {
+                              targetX *= 8.0;
+                              targetZ *= 8.0;
+                            } else if (_selectedDimension == -1 && w.dimension == 0) {
+                              targetX /= 8.0;
+                              targetZ /= 8.0;
+                            }
+                            
+                            _centerMapOn(Offset(targetX, targetZ));
                           },
                           trailing: IconButton(
                             icon: const Icon(Icons.delete_outline, color: Colors.redAccent),
                             onPressed: () async {
-                              final updatedWaypoints = List<Waypoint>.from(_currentWorld.waypoints)..removeAt(index);
-                              _currentWorld = _currentWorld.copyWith(waypoints: updatedWaypoints);
-                              await _worldRepo.saveWorld(_currentWorld);
-                              
-                              setModalState(() {}); // Refresh modal
-                              setState(() { // Refresh map
-                                _onViewChanged();
-                              });
+                              final originalIndex = _currentWorld.waypoints.indexWhere((ow) => ow.id == w.id);
+                              if (originalIndex >= 0) {
+                                final updatedWaypoints = List<Waypoint>.from(_currentWorld.waypoints)..removeAt(originalIndex);
+                                _currentWorld = _currentWorld.copyWith(waypoints: updatedWaypoints);
+                                await _worldRepo.saveWorld(_currentWorld);
+                                
+                                setModalState(() {}); // Refresh modal
+                                setState(() { // Refresh map
+                                  _onViewChanged();
+                                });
+                              }
                             },
                           ),
                         );

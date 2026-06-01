@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/iveeyh/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/RelWithDebInfo/e2n524s4/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/iveeyh/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/.cxx/RelWithDebInfo/e2n524s4/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "cubiomes_engine::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "cubiomes_engine",
+      "output": "/Users/iveeyh/Repositories/minecraft_waypoints/build/cubiomes_ffi/intermediates/cxx/RelWithDebInfo/e2n524s4/obj/x86/libcubiomes_engine.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/iveeyh/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

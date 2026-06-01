@@ -1,0 +1,1 @@
+/Users/iveeyh/Repositories/minecraft_waypoints/build/cubiomes_ffi/intermediates/cxx/Debug/43305u5r/obj/x86_64

@@ -1,0 +1,1 @@
+/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/android/CMakeLists.txt

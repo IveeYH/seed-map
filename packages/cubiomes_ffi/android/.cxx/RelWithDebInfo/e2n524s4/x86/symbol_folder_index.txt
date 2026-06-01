@@ -1,0 +1,1 @@
+/Users/iveeyh/Repositories/minecraft_waypoints/build/cubiomes_ffi/intermediates/cxx/RelWithDebInfo/e2n524s4/obj/x86
