@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import '../../worlds/domain/world_model.dart';
-import '../../../core/ffi/cubiomes_finders.dart' show StructureType;
 
 class StructureMark {
   final Offset pos;

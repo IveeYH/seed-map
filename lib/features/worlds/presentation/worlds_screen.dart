@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'dart:math';
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../domain/world_model.dart';
@@ -144,46 +143,6 @@ class _WorldsScreenState extends State<WorldsScreen> {
           await _repository.saveWorld(updatedWorld);
           _loadWorlds();
         },
-      ),
-    );
-  }
-
-  void _showLanguageDialog(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-    final theme = Theme.of(context);
-    
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: theme.dialogBackgroundColor,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: Text(l10n.language, style: TextStyle(color: theme.colorScheme.onSurface, fontWeight: FontWeight.bold)),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              title: Text(l10n.languageSystem, style: TextStyle(color: theme.colorScheme.onSurface)),
-              onTap: () {
-                languageManager.setLocale(null);
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text(l10n.languageEnglish, style: TextStyle(color: theme.colorScheme.onSurface)),
-              onTap: () {
-                languageManager.setLocale(const Locale('en'));
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text(l10n.languageSpanish, style: TextStyle(color: theme.colorScheme.onSurface)),
-              onTap: () {
-                languageManager.setLocale(const Locale('es'));
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
       ),
     );
   }

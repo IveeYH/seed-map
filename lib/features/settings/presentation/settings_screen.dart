@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../theme_manager.dart';
-import '../language_manager.dart';
 import 'package:minecraft_seedwalker_mobile/main.dart'; // To access themeManager and languageManager
 import 'privacy_policy_screen.dart';
 import 'package:minecraft_seedwalker_mobile/l10n/app_localizations.dart';
