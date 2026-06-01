@@ -1,0 +1,10 @@
+framework module cubiomes_ffi {
+  umbrella header "cubiomes_ffi-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module cubiomes_ffi.Swift {
+  header "cubiomes_ffi-Swift.h"
+}

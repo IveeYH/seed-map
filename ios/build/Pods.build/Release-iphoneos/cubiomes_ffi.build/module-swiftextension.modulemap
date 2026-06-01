@@ -1,0 +1,4 @@
+
+module cubiomes_ffi.Swift {
+  header "cubiomes_ffi-Swift.h"
+}

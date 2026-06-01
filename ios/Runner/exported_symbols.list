@@ -1,0 +1,6 @@
+_estimateSpawn
+_getStructurePos
+_isViableStructurePos
+_setupGenerator
+_applySeed
+_getBiomeAt

@@ -1,0 +1,16 @@
+{
+  "" : {
+    "const-values" : "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/Objects-normal/arm64/cubiomes_ffi-primary.swiftconstvalues",
+    "dependencies" : "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/Objects-normal/arm64/cubiomes_ffi-primary.d",
+    "diagnostics" : "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/Objects-normal/arm64/cubiomes_ffi-primary.dia",
+    "emit-module-dependencies" : "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/Objects-normal/arm64/cubiomes_ffi-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/Objects-normal/arm64/cubiomes_ffi-primary-emit-module.dia",
+    "pch" : "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/Objects-normal/arm64/cubiomes_ffi-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/Objects-normal/arm64/cubiomes_ffi-primary.swiftdeps"
+  },
+  "/Users/iveeyh/Repositories/minecraft_waypoints/packages/cubiomes_ffi/ios/Classes/CubiomesFfiPlugin.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/cubiomes_ffi.build/Objects-normal/arm64/CubiomesFfiPlugin.o",
+    "llvm-bc" : "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/Objects-normal/arm64/CubiomesFfiPlugin.bc",
+    "object" : "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/Objects-normal/arm64/CubiomesFfiPlugin.o"
+  }
+}

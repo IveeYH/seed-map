@@ -1,0 +1,4 @@
+
+module cubiomes_ffi.__Swift {
+  exclude header "cubiomes_ffi-Swift.h"
+}

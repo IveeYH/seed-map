@@ -1,0 +1,23 @@
+{
+  "version": 0,
+  "use-external-names": false,
+  "case-sensitive": false,
+  "roots": [{
+    "type": "directory",
+    "name": "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Release-iphoneos/cubiomes_ffi/cubiomes_ffi.framework/Modules",
+    "contents": [{
+      "type": "file",
+      "name": "module.modulemap",
+      "external-contents": "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    "type": "directory",
+    "name": "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Release-iphoneos/cubiomes_ffi/cubiomes_ffi.framework/Headers",
+    "contents": [{
+      "type": "file",
+      "name": "cubiomes_ffi-Swift.h",
+      "external-contents": "/Users/iveeyh/Repositories/minecraft_waypoints/ios/build/Pods.build/Release-iphoneos/cubiomes_ffi.build/unextended-interface-header.h",
+    }]
+  }]
+}
