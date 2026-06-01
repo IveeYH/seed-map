@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:minecraft_seedwalker_mobile/l10n/app_localizations.dart';
 import 'dart:ui' as ui;
+import 'dart:math';
 
 import '../../../core/ffi/biome_colors.dart';
 import '../application/map_generator.dart';
 import 'map_painter.dart';
 import 'map_overlay_painter.dart';
+import 'structure_ui_helpers.dart';
 import '../../worlds/domain/world_model.dart';
 import '../../worlds/data/world_repository.dart';
 import '../../worlds/presentation/world_settings_dialog.dart';
+import '../../../core/ffi/cubiomes_finders.dart';
 
 class MapScreen extends StatefulWidget {
   final World world;
@@ -54,6 +57,8 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
 
   late int _selectedDimension; // 0 = Overworld, -1 = Nether, 1 = End
   int _selectedHeight = 320;  // 320 = Surface, 0 = Underground, -51 = Bottom
+
+  bool _isFiltersExpanded = false;
 
   static const double worldSize = 100000.0;
   static const double centerOffset = worldSize / 2;
