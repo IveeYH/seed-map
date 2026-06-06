@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appTitle": "Minecraft Waypoints",
+  "appTitle": "Seed Map",
   "worldsScreenTitle": "Your Worlds",
   "worldsScreenNewWorld": "NEW WORLD",
   "worldsScreenToggleTheme": "Toggle Theme",
@@ -15,7 +15,7 @@
   "dimensionEnd": "The End",
   "worldSettingsName": "World Name",
   "worldSettingsSeed": "Seed (leave empty for random)",
-  "worldSettingsVersion": "Minecraft Version",
+  "worldSettingsVersion": "Generation Version",
   "worldSettingsCancel": "Cancel",
   "worldSettingsSave": "Save",
   "worldSettingsCreate": "Create",
@@ -32,7 +32,7 @@
   "mapScreenFilterWaypoints": "Waypoints",
   "mapScreenFilterSpawn": "Spawn",
   "tutorialWelcome": "Welcome!",
-  "tutorialWelcomeDesc": "Minecraft Waypoints lets you preview your world, biomes and structures in real time.",
+  "tutorialWelcomeDesc": "Seed Map lets you preview your world, biomes and structures in real time.",
   "tutorialDimensions": "Three Dimensions",
   "tutorialDimensionsDesc": "From the main menu you can choose to explore the Overworld, the Nether or the End with a single tap.",
   "tutorialNavigation": "Navigation",
@@ -63,7 +63,7 @@
   "settingsDarkMode": "Dark Mode",
   "settingsLegal": "Legal & Information",
   "settingsPrivacy": "Privacy Policy",
-  "settingsUnofficial": "UNOFFICIAL APPLICATION",
-  "settingsUnofficialDesc": "This is an unofficial application for Minecraft. This application is not affiliated in any way with Mojang AB. The Minecraft Name, the Minecraft Brand and the Minecraft Assets are all property of Mojang AB or their respectful owner.",
+  "settingsUnofficial": "COMPATIBLE UTILITY",
+  "settingsUnofficialDesc": "This is an independent utility compatible with block-building sandbox games. It is not affiliated with or endorsed by the developers of any official game.",
   "mapScreenWaypointFrom": "From: "
 }

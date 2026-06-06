@@ -101,7 +101,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Minecraft Waypoints'**
+  /// **'Seed Map'**
   String get appTitle;
 
   /// No description provided for @worldsScreenTitle.
@@ -191,7 +191,7 @@ abstract class AppLocalizations {
   /// No description provided for @worldSettingsVersion.
   ///
   /// In en, this message translates to:
-  /// **'Minecraft Version'**
+  /// **'Generation Version'**
   String get worldSettingsVersion;
 
   /// No description provided for @worldSettingsCancel.
@@ -293,7 +293,7 @@ abstract class AppLocalizations {
   /// No description provided for @tutorialWelcomeDesc.
   ///
   /// In en, this message translates to:
-  /// **'Minecraft Waypoints lets you preview your world, biomes and structures in real time.'**
+  /// **'Seed Map lets you preview your world, biomes and structures in real time.'**
   String get tutorialWelcomeDesc;
 
   /// No description provided for @tutorialDimensions.
@@ -479,13 +479,13 @@ abstract class AppLocalizations {
   /// No description provided for @settingsUnofficial.
   ///
   /// In en, this message translates to:
-  /// **'UNOFFICIAL APPLICATION'**
+  /// **'COMPATIBLE UTILITY'**
   String get settingsUnofficial;
 
   /// No description provided for @settingsUnofficialDesc.
   ///
   /// In en, this message translates to:
-  /// **'This is an unofficial application for Minecraft. This application is not affiliated in any way with Mojang AB. The Minecraft Name, the Minecraft Brand and the Minecraft Assets are all property of Mojang AB or their respectful owner.'**
+  /// **'This is an independent utility compatible with block-building sandbox games. It is not affiliated with or endorsed by the developers of any official game.'**
   String get settingsUnofficialDesc;
 
   /// No description provided for @mapScreenWaypointFrom.

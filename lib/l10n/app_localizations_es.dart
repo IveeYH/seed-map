@@ -9,7 +9,7 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get appTitle => 'Minecraft Waypoints';
+  String get appTitle => 'Seed Map';
 
   @override
   String get worldsScreenTitle => 'Tus Mundos';
@@ -54,7 +54,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get worldSettingsSeed => 'Semilla (en blanco para aleatoria)';
 
   @override
-  String get worldSettingsVersion => 'Versión de Minecraft';
+  String get worldSettingsVersion => 'Versión de generación';
 
   @override
   String get worldSettingsCancel => 'Cancelar';
@@ -107,7 +107,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get tutorialWelcomeDesc =>
-      'Minecraft Waypoints te permite previsualizar tu mundo, biomas y estructuras en tiempo real.';
+      'Seed Map te permite previsualizar tu mundo, biomas y estructuras en tiempo real.';
 
   @override
   String get tutorialDimensions => 'Tres Dimensiones';
@@ -203,11 +203,11 @@ class AppLocalizationsEs extends AppLocalizations {
   String get settingsPrivacy => 'Política de Privacidad';
 
   @override
-  String get settingsUnofficial => 'APLICACIÓN NO OFICIAL';
+  String get settingsUnofficial => 'UTILIDAD COMPATIBLE';
 
   @override
   String get settingsUnofficialDesc =>
-      'Esta es una aplicación no oficial para Minecraft. Esta aplicación no está afiliada de ninguna manera con Mojang AB. El Nombre de Minecraft, la Marca de Minecraft y los Activos de Minecraft son propiedad de Mojang AB o de su respectivo dueño.';
+      'Esta es una utilidad independiente compatible con juegos de construcción de bloques sandbox. No está afiliada ni avalada por los creadores de ningún juego oficial.';
 
   @override
   String get mapScreenWaypointFrom => 'De: ';

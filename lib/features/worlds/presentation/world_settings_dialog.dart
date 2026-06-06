@@ -136,21 +136,26 @@ class _WorldSettingsDialogState extends State<WorldSettingsDialog> {
   Widget build(BuildContext context) {
     final isEditing = widget.initialWorld != null;
     final l10n = AppLocalizations.of(context)!;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textColor = isDark ? Colors.white : Colors.black87;
+    final subTextColor = isDark ? Colors.white70 : Colors.black54;
+    final labelColor = isDark ? Colors.white54 : Colors.black54;
+    final borderColor = isDark ? Colors.white24 : Colors.black12;
     
     return AlertDialog(
       backgroundColor: Theme.of(context).dialogBackgroundColor,
-      title: Text(isEditing ? l10n.worldSettingsTitleEdit : l10n.worldSettingsTitleNew, style: const TextStyle(color: Colors.white)),
+      title: Text(isEditing ? l10n.worldSettingsTitleEdit : l10n.worldSettingsTitleNew, style: TextStyle(color: textColor, fontWeight: FontWeight.bold)),
       content: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             TextField(
               controller: _nameController,
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: textColor),
               decoration: InputDecoration(
                 labelText: l10n.worldSettingsName,
-                labelStyle: const TextStyle(color: Colors.white54),
-                enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.white24)),
+                labelStyle: TextStyle(color: labelColor),
+                enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: borderColor)),
                 focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Theme.of(context).primaryColor)),
               ),
             ),
@@ -158,11 +163,11 @@ class _WorldSettingsDialogState extends State<WorldSettingsDialog> {
             TextField(
               controller: _seedController,
               keyboardType: const TextInputType.numberWithOptions(signed: true),
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: textColor),
               decoration: InputDecoration(
                 labelText: l10n.worldSettingsSeed,
-                labelStyle: const TextStyle(color: Colors.white54),
-                enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.white24)),
+                labelStyle: TextStyle(color: labelColor),
+                enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: borderColor)),
                 focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Theme.of(context).primaryColor)),
                 suffixIcon: IconButton(
                   icon: Icon(Icons.casino, color: Theme.of(context).primaryColor),
@@ -174,17 +179,17 @@ class _WorldSettingsDialogState extends State<WorldSettingsDialog> {
             DropdownButtonFormField<String>(
               value: _selectedVersionKey,
               dropdownColor: Theme.of(context).cardColor,
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: textColor),
               decoration: InputDecoration(
                 labelText: l10n.worldSettingsVersion,
-                labelStyle: const TextStyle(color: Colors.white54),
-                enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.white24)),
+                labelStyle: TextStyle(color: labelColor),
+                enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: borderColor)),
                 focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Theme.of(context).primaryColor)),
               ),
               items: _versions.keys.map((key) {
                 return DropdownMenuItem<String>(
                   value: key,
-                  child: Text(key),
+                  child: Text(key, style: TextStyle(color: textColor)),
                 );
               }).toList(),
               onChanged: (value) {
@@ -201,14 +206,17 @@ class _WorldSettingsDialogState extends State<WorldSettingsDialog> {
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: Text(l10n.worldSettingsCancel, style: const TextStyle(color: Colors.white54)),
+          child: Text(l10n.worldSettingsCancel, style: TextStyle(color: subTextColor)),
         ),
         ElevatedButton(
-          style: ElevatedButton.styleFrom(backgroundColor: Theme.of(context).primaryColor),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Theme.of(context).primaryColor,
+            foregroundColor: Colors.white,
+          ),
           onPressed: _isSaving ? null : _save,
           child: _isSaving 
             ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
-            : Text(isEditing ? l10n.worldSettingsSave : l10n.worldSettingsCreate, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+            : Text(isEditing ? l10n.worldSettingsSave : l10n.worldSettingsCreate, style: const TextStyle(fontWeight: FontWeight.bold)),
         ),
       ],
     );

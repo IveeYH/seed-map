@@ -18,8 +18,14 @@ class _TutorialDialogState extends State<TutorialDialog> {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textColor = isDark ? Colors.white : Colors.black87;
+    final subTextColor = isDark ? Colors.white70 : Colors.black54;
+    final hintTextColor = isDark ? Colors.white54 : Colors.black45;
+
     return AlertDialog(
       backgroundColor: Theme.of(context).dialogBackgroundColor,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -42,21 +48,29 @@ class _TutorialDialogState extends State<TutorialDialog> {
                     icon: Icons.map,
                     title: l10n.tutorialWelcome,
                     description: l10n.tutorialWelcomeDesc,
+                    textColor: textColor,
+                    subTextColor: subTextColor,
                   ),
                   _buildPage(
                     icon: Icons.public,
                     title: l10n.tutorialDimensions,
                     description: l10n.tutorialDimensionsDesc,
+                    textColor: textColor,
+                    subTextColor: subTextColor,
                   ),
                   _buildPage(
                     icon: Icons.touch_app,
                     title: l10n.tutorialNavigation,
                     description: l10n.tutorialNavigationDesc,
+                    textColor: textColor,
+                    subTextColor: subTextColor,
                   ),
                   _buildPage(
                     icon: Icons.settings,
                     title: l10n.tutorialVersions,
                     description: l10n.tutorialVersionsDesc,
+                    textColor: textColor,
+                    subTextColor: subTextColor,
                   ),
                 ],
               ),
@@ -82,7 +96,7 @@ class _TutorialDialogState extends State<TutorialDialog> {
                   ),
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: Text(l10n.tutorialSkip, style: const TextStyle(color: Colors.white54)),
+                    child: Text(l10n.tutorialSkip, style: TextStyle(color: hintTextColor)),
                   ),
                   _currentPage < 3
                     ? ElevatedButton(
@@ -115,7 +129,13 @@ class _TutorialDialogState extends State<TutorialDialog> {
     );
   }
 
-  Widget _buildPage({required IconData icon, required String title, required String description}) {
+  Widget _buildPage({
+    required IconData icon,
+    required String title,
+    required String description,
+    required Color textColor,
+    required Color subTextColor,
+  }) {
     return Padding(
       padding: const EdgeInsets.all(32.0),
       child: Column(
@@ -125,13 +145,13 @@ class _TutorialDialogState extends State<TutorialDialog> {
           const SizedBox(height: 32),
           Text(
             title,
-            style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+            style: TextStyle(color: textColor, fontSize: 24, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 16),
           Text(
             description,
-            style: const TextStyle(color: Colors.white70, fontSize: 16, height: 1.5),
+            style: TextStyle(color: subTextColor, fontSize: 16, height: 1.5),
             textAlign: TextAlign.center,
           ),
         ],

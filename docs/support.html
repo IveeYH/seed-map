@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seed Map - Soporte y Ayuda / Support & FAQ</title>
+    <style>
+        :root {
+            --primary: #00E676;
+            --primary-hover: #00c853;
+            --bg: #141821;
+            --card-bg: rgba(44, 49, 64, 0.4);
+            --text: #ffffff;
+            --text-muted: #b0bec5;
+            --border: rgba(255, 255, 255, 0.08);
+            --glow: rgba(0, 230, 118, 0.2);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background-image: radial-gradient(circle at 50% 50%, #1e222d 0%, #141821 100%);
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.4);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary);
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--glow);
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 32px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 1.4rem;
+            color: #fff;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        p, li {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .faq-item {
+            margin-bottom: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .faq-question {
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+        .faq-answer {
+            margin: 0;
+        }
+        .contact-box {
+            background: rgba(0, 230, 118, 0.05);
+            border: 1px dashed var(--primary);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            margin-top: 32px;
+        }
+        .contact-box p {
+            color: #fff;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--primary);
+            color: #141821;
+            padding: 12px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 14px var(--glow);
+        }
+        .contact-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4);
+        }
+        .footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.25);
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+        }
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 8px;
+            font-weight: 500;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .lang-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .lang-link:hover {
+            text-decoration: underline;
+        }
+        .lang-divider {
+            color: var(--border);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="#es" class="lang-link">ESPAÑOL</a>
+            <span class="lang-divider">|</span>
+            <a href="#en" class="lang-link">ENGLISH</a>
+        </div>
+
+        <!-- SECCIÓN ESPAÑOL -->
+        <section id="es">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <h1>Soporte de Seed Map</h1>
+            </div>
+            <div class="subtitle">Centro de Ayuda y FAQ</div>
+
+            <p>Bienvenido al canal oficial de soporte de <strong>Seed Map</strong>. Aquí encontrarás respuestas a las preguntas más comunes sobre la aplicación y cómo contactar con el desarrollador si necesitas asistencia técnica o reportar algún fallo.</p>
+
+            <h2>Preguntas Frecuentes (FAQ)</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo funciona Seed Map?</div>
+                <p class="faq-answer">Seed Map calcula los biomas y la ubicación de las estructuras directamente en tu dispositivo utilizando una librería matemática muy optimizada. Solo tienes que introducir la semilla numérica de tu mundo, elegir la versión de generación del juego y comenzar a explorar el mapa interactivo.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿La aplicación requiere conexión a internet?</div>
+                <p class="faq-answer">No. Toda la generación del mapa se ejecuta de forma completamente local y 100% offline. No necesitas estar conectado a internet ni consumir datos de red para ver tus mundos o gestionar tus waypoints.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo añado mis waypoints personalizados?</div>
+                <p class="faq-answer">Abre el mapa de tu mundo, colócate en la zona donde desees guardar tus coordenadas y pulsa el botón flotante circular de color verde (icono de marcador). Se abrirá un menú para escribir el nombre del waypoint y seleccionar su color identificativo.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Con qué versiones de juego es compatible?</div>
+                <p class="faq-answer">Es compatible con los algoritmos de generación correspondientes a la versión Java desde la 1.0 hasta la 1.21 (incluyendo las últimas versiones del juego de bloques). Puedes cambiar la versión de generación en la configuración de cada mundo en cualquier momento.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo se garantiza mi privacidad?</div>
+                <p class="faq-answer">No recopilamos ni almacenamos ningún tipo de información personal, coordenadas ni semillas de mundos. Todos tus datos se guardan estrictamente dentro de tu dispositivo móvil de forma local.</p>
+            </div>
+
+            <div class="contact-box">
+                <p>¿Tienes alguna duda adicional o quieres informar sobre un error?</p>
+                <a href="mailto:ivanlopezlopez1997@gmail.com?subject=Soporte%20Seed%20Map" class="contact-btn">Enviar Correo de Soporte</a>
+            </div>
+        </section>
+
+        <hr style="margin: 60px 0; border: none; border-top: 1px solid var(--border);" id="en">
+
+        <!-- SECCIÓN INGLÉS -->
+        <section>
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <h1>Seed Map Support</h1>
+            </div>
+            <div class="subtitle">Help Center & FAQ</div>
+
+            <p>Welcome to the official support channel for <strong>Seed Map</strong>. Here you will find answers to the most common questions about the application and how to contact the developer if you need technical assistance or want to report a bug.</p>
+
+            <h2>Frequently Asked Questions (FAQ)</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How does Seed Map work?</div>
+                <p class="faq-answer">Seed Map calculates biomes and structure positions directly on your device using an optimized math library. You only need to enter your world's numerical seed, choose the game generation version, and start exploring the interactive map.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Does the app require an internet connection?</div>
+                <p class="faq-answer">No. All map generation runs completely locally and 100% offline. You do not need to be connected to the internet or consume network data to view your worlds or manage your waypoints.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I add my custom waypoints?</div>
+                <p class="faq-answer">Open the map of your world, pan to the area where you want to save your coordinates, and tap the green floating marker button. A dialog will open where you can type the waypoint's name and choose a custom marker color.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Which game versions are supported?</div>
+                <p class="faq-answer">The app supports generation algorithms corresponding to Java versions from 1.0 up to 1.21 (including the latest block-sandbox updates). You can change the generation version in the world settings at any time.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How is my privacy protected?</div>
+                <p class="faq-answer">We do not collect or store any personal information, coordinates, or world seeds. All your data remains strictly on your mobile device local storage.</p>
+            </div>
+
+            <div class="contact-box">
+                <p>Do you have any other questions or need to report an issue?</p>
+                <a href="mailto:ivanlopezlopez1997@gmail.com?subject=Seed%20Map%20Support" class="contact-btn">Send Support Email</a>
+            </div>
+        </section>
+
+        <div class="footer">
+            &copy; 2026 Iván López López. Todos los derechos reservados. / All rights reserved.
+            <br><br>
+            <a href="privacy-policy.html">Política de Privacidad / Privacy Policy</a>
+        </div>
+    </div>
+</body>
+</html>

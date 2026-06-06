@@ -86,12 +86,12 @@ class _WorldsScreenState extends State<WorldsScreen> {
   }
 
   void _showDimensionPicker(World world) {
+    final theme = Theme.of(context);
     showModalBottomSheet(
       context: context,
-      backgroundColor: const Color(0xFF1E222D),
+      backgroundColor: theme.bottomSheetTheme.backgroundColor,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (context) {
-        final theme = Theme.of(context);
         final l10n = AppLocalizations.of(context)!;
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 24.0),

@@ -175,6 +175,12 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
       0xFFFF4081, // Rose Pink
     ];
 
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textColor = isDark ? Colors.white : Colors.black87;
+    final subTextColor = isDark ? Colors.white70 : Colors.black54;
+    final labelColor = isDark ? Colors.white54 : Colors.black54;
+    final borderColor = isDark ? Colors.white24 : Colors.black12;
+
     showDialog(
       context: context,
       builder: (context) => StatefulBuilder(
@@ -182,19 +188,19 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
           return AlertDialog(
             backgroundColor: Theme.of(context).dialogBackgroundColor,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-            title: Text(AppLocalizations.of(context)!.mapScreenAddWaypoint, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+            title: Text(AppLocalizations.of(context)!.mapScreenAddWaypoint, style: TextStyle(color: textColor, fontWeight: FontWeight.bold)),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('Coordenadas: X: $blockX, Z: $blockZ', style: const TextStyle(color: Colors.white70)),
+                Text('Coordenadas: X: $blockX, Z: $blockZ', style: TextStyle(color: subTextColor)),
                 const SizedBox(height: 16),
                 TextField(
                   controller: nameController,
-                  style: const TextStyle(color: Colors.white),
+                  style: TextStyle(color: textColor),
                   decoration: InputDecoration(
                     labelText: AppLocalizations.of(context)!.mapScreenWaypointName,
-                    labelStyle: const TextStyle(color: Colors.white54),
-                    enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.white24)),
+                    labelStyle: TextStyle(color: labelColor),
+                    enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: borderColor)),
                     focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Theme.of(context).primaryColor)),
                   ),
                   autofocus: true,
@@ -211,7 +217,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                         color: Color(c),
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: selectedColor == c ? Colors.white : Colors.transparent,
+                          color: selectedColor == c ? (isDark ? Colors.white : Colors.black87) : Colors.transparent,
                           width: 3,
                         ),
                       ),
@@ -223,7 +229,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context),
-                child: Text(AppLocalizations.of(context)!.mapScreenCancel, style: const TextStyle(color: Colors.white54)),
+                child: Text(AppLocalizations.of(context)!.mapScreenCancel, style: TextStyle(color: labelColor)),
               ),
               TextButton(
                 onPressed: () async {
@@ -274,6 +280,10 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (context) => StatefulBuilder(
         builder: (context, setModalState) {
+          final isDark = Theme.of(context).brightness == Brightness.dark;
+          final textColor = isDark ? Colors.white : Colors.black87;
+          final subTextColor = isDark ? Colors.white70 : Colors.black54;
+
           final waypoints = _currentWorld.waypoints.where((w) {
             if (selectedDimensions.isEmpty) return true;
             return selectedDimensions.contains(w.dimension);
@@ -293,14 +303,14 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
               children: [
                 Text(
                   AppLocalizations.of(context)!.mapScreenWaypointList,
-                  style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                  style: TextStyle(color: textColor, fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 12),
                 Wrap(
                   spacing: 8,
                   children: [
                     FilterChip(
-                      label: Text(AppLocalizations.of(context)!.dimensionOverworld, style: const TextStyle(color: Colors.white)),
+                      label: Text(AppLocalizations.of(context)!.dimensionOverworld, style: TextStyle(color: textColor)),
                       selected: selectedDimensions.contains(0),
                       onSelected: (val) {
                         setModalState(() {
@@ -313,7 +323,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                       backgroundColor: Theme.of(context).cardColor,
                     ),
                     FilterChip(
-                      label: Text(AppLocalizations.of(context)!.dimensionNether, style: const TextStyle(color: Colors.white)),
+                      label: Text(AppLocalizations.of(context)!.dimensionNether, style: TextStyle(color: textColor)),
                       selected: selectedDimensions.contains(-1),
                       onSelected: (val) {
                         setModalState(() {
@@ -326,7 +336,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                       backgroundColor: Theme.of(context).cardColor,
                     ),
                     FilterChip(
-                      label: Text(AppLocalizations.of(context)!.dimensionEnd, style: const TextStyle(color: Colors.white)),
+                      label: Text(AppLocalizations.of(context)!.dimensionEnd, style: TextStyle(color: textColor)),
                       selected: selectedDimensions.contains(1),
                       onSelected: (val) {
                         setModalState(() {
@@ -347,7 +357,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                     child: Text(
                       AppLocalizations.of(context)!.mapScreenNoWaypoints,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(color: Colors.white54),
+                      style: TextStyle(color: subTextColor),
                     ),
                   )
                 else
@@ -361,12 +371,12 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                           leading: Icon(Icons.flag, color: Color(w.color), size: 32),
                           title: Row(
                             children: [
-                              Text(w.name, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                              Text(w.name, style: TextStyle(color: textColor, fontWeight: FontWeight.bold)),
                               const SizedBox(width: 8),
                               getDimensionIcon(w.dimension),
                             ],
                           ),
-                          subtitle: Text('X: ${w.x}  Z: ${w.z}', style: const TextStyle(color: Colors.white54, fontFamily: 'monospace')),
+                          subtitle: Text('X: ${w.x}  Z: ${w.z}', style: TextStyle(color: subTextColor, fontFamily: 'monospace')),
                           onTap: () {
                             Navigator.pop(context);
                             double targetX = w.x.toDouble();
@@ -779,6 +789,11 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
 
 
   void _showSettingsMenu() {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textColor = isDark ? Colors.white : Colors.black87;
+    final labelColor = isDark ? Colors.white54 : Colors.black54;
+    final borderColor = isDark ? Colors.white24 : Colors.black12;
+
     showModalBottomSheet(
       context: context,
       backgroundColor: Theme.of(context).bottomSheetTheme.backgroundColor,
@@ -799,23 +814,23 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                     controller: scrollController,
                     padding: const EdgeInsets.all(16),
                     children: [
-                      Text(AppLocalizations.of(context)!.mapSettingsTitle, style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
-                      const Divider(color: Colors.white24, height: 32),
+                      Text(AppLocalizations.of(context)!.mapSettingsTitle, style: TextStyle(color: textColor, fontSize: 20, fontWeight: FontWeight.bold)),
+                      Divider(color: borderColor, height: 32),
                       
-                      Text(AppLocalizations.of(context)!.mapSettingsDimension, style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+                      Text(AppLocalizations.of(context)!.mapSettingsDimension, style: TextStyle(color: textColor, fontSize: 16, fontWeight: FontWeight.bold)),
                       const SizedBox(height: 8),
                       DropdownButtonFormField<int>(
                         value: _selectedDimension,
                         dropdownColor: Theme.of(context).cardColor,
-                        style: const TextStyle(color: Colors.white),
+                        style: TextStyle(color: textColor),
                         decoration: const InputDecoration(
                           border: OutlineInputBorder(),
                           contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                         ),
                         items: [
-                          DropdownMenuItem(value: 0, child: Row(children: [const Icon(Icons.public, color: Colors.green, size: 20), const SizedBox(width: 8), Text(AppLocalizations.of(context)!.dimensionOverworld)])),
-                          DropdownMenuItem(value: -1, child: Row(children: [const Icon(Icons.whatshot, color: Colors.redAccent, size: 20), const SizedBox(width: 8), Text(AppLocalizations.of(context)!.dimensionNether)])),
-                          DropdownMenuItem(value: 1, child: Row(children: [const Icon(Icons.nights_stay, color: Colors.deepPurple, size: 20), const SizedBox(width: 8), Text(AppLocalizations.of(context)!.dimensionEnd)])),
+                          DropdownMenuItem(value: 0, child: Row(children: [const Icon(Icons.public, color: Colors.green, size: 20), const SizedBox(width: 8), Text(AppLocalizations.of(context)!.dimensionOverworld, style: TextStyle(color: textColor))])),
+                          DropdownMenuItem(value: -1, child: Row(children: [const Icon(Icons.whatshot, color: Colors.redAccent, size: 20), const SizedBox(width: 8), Text(AppLocalizations.of(context)!.dimensionNether, style: TextStyle(color: textColor))])),
+                          DropdownMenuItem(value: 1, child: Row(children: [const Icon(Icons.nights_stay, color: Colors.deepPurple, size: 20), const SizedBox(width: 8), Text(AppLocalizations.of(context)!.dimensionEnd, style: TextStyle(color: textColor))])),
                         ],
                         onChanged: (val) {
                           if (val != null) {
@@ -835,20 +850,20 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                       
                       if (_selectedDimension == 0) ...[
                         const SizedBox(height: 16),
-                        Text(AppLocalizations.of(context)!.mapSettingsBiomeHeight, style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+                        Text(AppLocalizations.of(context)!.mapSettingsBiomeHeight, style: TextStyle(color: textColor, fontSize: 16, fontWeight: FontWeight.bold)),
                         const SizedBox(height: 8),
                         DropdownButtonFormField<int>(
                           value: _selectedHeight,
                           dropdownColor: Theme.of(context).cardColor,
-                          style: const TextStyle(color: Colors.white),
+                          style: TextStyle(color: textColor),
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(),
                             contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                           ),
                           items: [
-                            DropdownMenuItem(value: 320, child: Text(AppLocalizations.of(context)!.mapSettingsSurface)),
-                            DropdownMenuItem(value: 0, child: Text(AppLocalizations.of(context)!.mapSettingsUnderground)),
-                            DropdownMenuItem(value: -51, child: Text(AppLocalizations.of(context)!.mapSettingsBottom)),
+                            DropdownMenuItem(value: 320, child: Text(AppLocalizations.of(context)!.mapSettingsSurface, style: TextStyle(color: textColor))),
+                            DropdownMenuItem(value: 0, child: Text(AppLocalizations.of(context)!.mapSettingsUnderground, style: TextStyle(color: textColor))),
+                            DropdownMenuItem(value: -51, child: Text(AppLocalizations.of(context)!.mapSettingsBottom, style: TextStyle(color: textColor))),
                           ],
                           onChanged: (val) {
                             if (val != null) {
@@ -864,11 +879,11 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                         ),
                       ],
                       
-                      const Divider(color: Colors.white24, height: 32),
+                      Divider(color: borderColor, height: 32),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(AppLocalizations.of(context)!.mapSettingsStructures, style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+                          Text(AppLocalizations.of(context)!.mapSettingsStructures, style: TextStyle(color: textColor, fontSize: 16, fontWeight: FontWeight.bold)),
                           Row(
                             children: [
                               TextButton(
@@ -895,7 +910,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                                     _onViewChanged();
                                   });
                                 },
-                                child: Text(AppLocalizations.of(context)!.mapSettingsNone, style: const TextStyle(color: Colors.white54)),
+                                child: Text(AppLocalizations.of(context)!.mapSettingsNone, style: TextStyle(color: labelColor)),
                               ),
                             ],
                           ),
@@ -908,8 +923,8 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                           final isActive = _activeStructures.contains(type);
                           return FilterChip(
                             showCheckmark: false,
-                            avatar: Icon(StructureUiHelper.getIcon(type), size: 18, color: isActive ? Colors.black : Colors.white),
-                            label: Text(StructureUiHelper.getName(context, type), style: TextStyle(color: isActive ? Colors.black : Colors.white)),
+                            avatar: Icon(StructureUiHelper.getIcon(type), size: 18, color: isActive ? Colors.black : textColor),
+                            label: Text(StructureUiHelper.getName(context, type), style: TextStyle(color: isActive ? Colors.black : textColor)),
                             selected: isActive,
                             selectedColor: Theme.of(context).primaryColor,
                             backgroundColor: Theme.of(context).cardColor,
